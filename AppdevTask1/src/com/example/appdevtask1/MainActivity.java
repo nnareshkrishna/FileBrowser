@@ -53,8 +53,28 @@ public class MainActivity extends Activity implements OnClickListener {
 			int i=0;
 			char temp ;
 			int t=0 ;
-			t=a.length ;
 			int l=0 ;
+			t=a.length;
+			if(t==2)
+			{l=(int) Math.ceil(Math.random()*2) ;
+			if(l==2)
+			{
+				l=1 ;
+			}
+				temp=a[0] ;
+				a[0]=a[1] ;
+				a[1]=temp ;
+			}
+			if(t==3)
+			{l=(int) Math.ceil(Math.random()*2);
+		
+				temp=a[0] ;
+				a[0]=a[l] ;
+				a[l]=temp ;
+				
+			}
+			else
+			{
 			l=(int)Math.ceil(Math.random()*t) ;
 			if(l<(t-1))
 			{
@@ -73,6 +93,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				temp=a[i] ;
 				a[i]=a[t-i] ;
 				a[t-i]=temp ;
+			}
 			}
 			String srt=new String(a) ;
 			txt2.setText(srt) ;
